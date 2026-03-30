@@ -1,13 +1,22 @@
+import { Routes, Route } from "react-router-dom";
 import './styles/index.css'
-import { Button } from "@/components/ui/button"
+import LoginPage from "./pages/Login/LoginPage"
+import Home from "./pages/Home/Home";
+import SignUpPage from "./pages/SignUp/SignUpPage";
+import NotFoundPage from "./pages/NotFoundPage";
 function App() {
 
   return (
     <>
-         <div className="w-20 h-50 bg-indigo-400">
-        <Button>hello</Button>
-         </div>
-    </>
+  
+    <Routes>
+  
+  <Route path="/" element={<Home />} />
+  <Route path="/login" element={<LoginPage />}/>
+  <Route path="/signup" element={<SignUpPage />} />
+  <Route path="*" element={<NotFoundPage/>} />
+</Routes>
+</>
   )
 }
 
