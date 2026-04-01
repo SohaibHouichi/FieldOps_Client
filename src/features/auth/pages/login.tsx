@@ -17,7 +17,7 @@ function LoginPage() {
     const [password, setPassword] = useState("")
     const [remember, setRemember] = useState(false)
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = (e: any) => {
         e.preventDefault()
         const data: loginReq = { email, password }
         login(data)
@@ -47,9 +47,6 @@ function LoginPage() {
                     </ul>
                 </div>
             </div>
-
-            {/* Right Side - Login Form */}
-            {/* Right Side - Login Form without Card */}
             <div className="flex w-full md:w-1/2 justify-center items-center p-8">
                 <div className="w-full max-w-md">
                     <h2 className="text-4xl font-bold mb-2">Welcome Back</h2>
@@ -91,8 +88,6 @@ function LoginPage() {
                                 required
                             />
                         </div>
-
-                        {/* Remember */}
                         <div className="flex items-center space-x-2">
                             <Checkbox
                                 id="remember"
